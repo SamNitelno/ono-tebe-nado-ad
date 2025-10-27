@@ -5,7 +5,7 @@ body {
 
 h1,
 h2,
-/*h3,*/
+h3,
 h4,
 h5,
 h6 {
@@ -28,18 +28,30 @@ h1 {
     align-items: center;
     height: 293px;
     padding: 50px;
+    position: relative;
 }
 
 .header-navigation {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     gap: 6px;
 }
 
-.header-logo {
-    place-self: center;
+.header-logo-div {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    justify-self: center;
     height: 105px;
     width: 148px;
+}
+
+.header-contacts {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 240px;
+    height: 98px;
 }
 
 .ono-tebe-nado-cover {
@@ -59,28 +71,49 @@ h1 {
     justify-content: space-between;
     align-items: center;
     padding: 0;
+    position: relative;
 }
 
 .it {
     margin: 0;
     align-self: flex-start;
+    letter-spacing: 30%;
+}
+
+.for-you {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    letter-spacing: 30%;
 }
 
 .needs {
+    position: absolute;
     align-self: flex-end;
-    margin: 0
+    margin: 0;
+    letter-spacing: 30%;
+    right: 0;
 }
 
 .description {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     height: 51px;
 }
 
 .subline {
+    display: flex;
+    justify-content: space-between;
+    width: 637px;
     color: white;
     font-size: 22px;
     font-family: Raleway, sans-serif;
+}
+
+.subline-description {
+    font-weight: normal;
+    font-size: 22px;
 }
 
 button {
@@ -100,6 +133,11 @@ button {
     margin: 160px 24px 0 24px;
 }
 
+.lots-article {
+    font-size: 40px;
+    margin-left: 40px;
+}
+
 .lots-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -108,6 +146,10 @@ button {
 }
 
 .first-lot-image {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 48px 40px;
     grid-column: 1;
     grid-row: 1;
     background-image: url("/images/card-lot-01.jpg");
@@ -115,20 +157,78 @@ button {
     background-position-x: center;
 }
 
+.first-lot-article {
+    font-family: "Raleway", sans-serif;
+    font-size: 22px;
+    color: white;
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+
+.first-lot-text {
+    font-family: "Raleway", sans-serif;
+    font-size: 20px;
+    color: white;
+}
+
 .second-lot-image {
-    grid-column: 2;
-    grid-row: 1;
-    background-image: url("/images/card-lot-02.jpg");
-    background-size: cover;
-    background-position-x: center;
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+     padding: 48px 40px;
+     grid-column: 2;
+     grid-row: 1;
+     background-image: url("/images/card-lot-02.jpg");
+     background-size: cover;
+     background-position-x: center;
+ }
+
+.second-lot-article {
+    font-family: "Raleway", sans-serif;
+    font-size: 22px;
+    color: white;
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+
+.second-lot-text {
+    font-family: "Raleway", sans-serif;
+    font-size: 20px;
+    color: white;
+    margin-bottom: 48px;
 }
 
 .third-lot-image {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 48px 40px;
     grid-column: 3;
     grid-row: 1;
     background-image: url("/images/card-lot-03.jpg");
     background-size: cover;
     background-position-x: center;
+}
+
+.third-lot-article {
+    font-family: "Raleway", sans-serif;
+    font-size: 22px;
+    color: white;
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+
+.third-lot-text {
+    font-family: "Raleway", sans-serif;
+    font-size: 20px;
+    color: white;
+    margin-bottom: 48px;
+}
+
+.lots-see-more {
+    font-size: 20px;
+    margin-left: 40px;
+    text-decoration: underline;
 }
 
 .about-auction {
@@ -140,6 +240,7 @@ button {
 
 .black-dot-logo {
     display: flex;
+    place-content: center;
     height: 240px;
     width: 240px;
     background-color: black;
@@ -163,11 +264,77 @@ button {
     margin-top: 133px;
 }
 
+.about-auction-article {
+    font-size: 40px;
+}
+
+.about-auction-text1{
+    margin-top: 100px;
+    font-size: 20px;
+}
+
+.about-auction-text2 {
+    font-size: 20px;
+}
+
 .footer {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     height: 180px;
+}
+
+.footer-contacts {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 265px;
+    height: 98px;
+}
+
+.number {
+    font-size: 18px;
+    text-decoration: underline;
+}
+
+.mail {
+    font-size: 18px;
+    text-decoration: underline;
+}
+
+.address {
+    font-size: 18px;
+}
+
+.footer-navigation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-self: center;
+    justify-content: space-between;
+    height: 64px;
+}
+
+.link-main-page {
+    font-size: 18px;
+    text-decoration: underline;
+}
+
+.see-lots {
+    font-size: 18px;
+    text-decoration: underline;
+}
+
+.about-auction-link {
+    font-size: 18px;
+    text-decoration: underline;
+}
+
+.media-links {
+    display: flex;
+    justify-content: space-between;
+    width: 240px;
+    height: 48px;
 }
 
 .media-links-image {
